@@ -48,6 +48,10 @@ img {
     flex-grow: 1;
     }
 /* HEADER SECTION */
+.header{
+  margin-top: 30px;
+  margin-bottom: 80px;
+}
 .header-container{
   width: 12500px;
   height: 42px;
@@ -87,4 +91,36 @@ img {
   margin: 0;
   padding: 0;
   color: #333333;
+}
+/* HERO */
+.hero {
+}
+.hero-container {
+  display: flex;
+}
+.hero-div{
+}
+.hero-title {
+}
+.hero-paragraph {
+}
+.hero-button {
+}
+.hero-img {
+  width: 567px;
+  height: 565px;
+  margin-right: -60px;
+}
+/* FEATURES */
+.features-list{
+  display: flex;
+}
+
+/* PROMO */
+
+
+/* RUNNERS */
+.runners{
+  height: 830px;
+  background-image: url(../img/runners.jpg);
 }
