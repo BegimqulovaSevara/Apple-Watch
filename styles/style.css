@@ -10,7 +10,10 @@ html {
   *::after {
     box-sizing: inherit;
     }
-
+*:focus{
+  outline: 2px dashed #EA625C;
+  outline-offset: 2px;
+}
 body {
     display: flex;
     flex-direction: column;
@@ -31,6 +34,7 @@ img {
     }
 :root{
   --text-decoration:none;
+  --primary-dark:#C9514C;
 }
 
   /* CONTAINER */
@@ -66,7 +70,7 @@ img {
   width: 450px;
   margin-bottom: 30px;
   padding: 0;
-  padding-left: 40px;
+  padding-left: 37px;
   border-left:solid #888888 ;
 }
 .site-button{
@@ -74,10 +78,19 @@ img {
   padding-bottom: 12px;
   padding-left: 38.5px;
   padding-right: 38.5px;
+  display: inline-block;
+  border: 0;
   text-transform: uppercase;
   color: #FFFFFF;
   text-decoration: none;
   background-color: #EA625C;
+  transition: background-color 0.3s ease;
+}
+.site-button:hover{
+  background-color: var(--primary-dark);
+}
+.site-button:active{
+  opacity: 0.6;
 }
 /* HEADER SECTION */
 .header{
@@ -87,7 +100,22 @@ img {
 .header-container{
   height: 42px;
   display: flex;
-  justify-content: space-between;
+  align-items:center;
+}
+.site-logo-link{
+  margin-right: auto;
+}
+.site-logo{
+  width: 35px;
+  height: 42px;
+  display: block;
+  object-fit: contain;
+}
+.site-logo:hover{
+  opacity: 0.8;
+}
+.site-logo:active{
+  opacity: 0.6;
 }
 .navigation{
   display: flex;
@@ -101,29 +129,39 @@ img {
 .headerlist-item{
   width: 100%;
   padding-right: 30px;
+  display: block;
 }
-.header-list:last-child{
-  padding-right: 0;
+.header-list:not(:last-child){
+  padding-right: 30px;
 }
 .header-item-link{
   margin-right: 0;
   padding-right: 0;
   color: #333333;
   text-decoration: var(--text-decoration);
+  border-bottom: 3px solid transparent;
+  transition: border-bottom: 0.3s ease;
 }
-.header-link-button{
-  width: 100%;
-  margin-bottom:3px;
-  color: #666666;
-  text-decoration: var(--text-decoration);
+.header-item-link:hover{
+  border-bottom:3px solid #333333;
 }
-.link-horizontal-roll{
-  width: 153px;
-  margin: 0;
-  padding: 0;
-  color: #333333;
+ /* Form  */
+.site-form-input{
+  padding-top: 6px;
+  padding-bottom: 6px;
+  border: none;
+  border-bottom: 1px solid #333;
 }
+
 /* HERO */
+.hero{
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 185px;
+  padding-top: 95px;
+  background-image: url(../img/intro-bg.jpg);
+  background-repeat: no-repeat;
+  background-position: left calc(50% + 550px) bottom;
+}
 .hero-div{
   margin-right: 245px;
 }
@@ -192,4 +230,17 @@ img {
 .runners-paragraph{
   border-left: solid #FFFFFF;
   color: #FFFFFF;
+}
+
+
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (   min--moz-device-pixel-ratio: 2),
+only screen and (     -o-min-device-pixel-ratio: 2/1),
+only screen and (        min-device-pixel-ratio: 2),
+only screen and (                min-resolution: 192dpi),
+only screen and (                min-resolution: 2dppx) { 
+  .hero{
+    background-image: url(../img/intro-bg@2x.jpg);
+  }
 }

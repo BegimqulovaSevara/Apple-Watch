@@ -16,30 +16,38 @@
 <body>
     <header class="header">
         <div class="container header-container">
-            <img src="./img/apple-logo.svg" alt="logo" width="35px" height="42px">
+            <a class="site-logo-link" href="#">
+                <img class="site-logo" src="./img/apple-logo.svg" alt="logo" width="35px" height="42px">
+            </a>
             <nav class="navigation">
                 <ul class="header-list">
-                    <li class="headerlist-item"><a class="header-item-link" href="#">Home</a></li>
-                    <li class="headerlist-item"><a class="header-item-link" href="#">About</a></li>
-                    <li class="headerlist-item"><a class="header-item-link" href="#">Offers</a></li>
-                    <li class="headerlist-item"><a class="header-item-link" href="#">Services</a></li>
+                    <li class="headerlist-item">
+                        <a class="header-item-link" href="#">Home</a>
+                    </li>
+                    <li class="headerlist-item">
+                        <a class="header-item-link" href="#">About</a>
+                    </li>
+                    <li class="headerlist-item">
+                        <a class="header-item-link" href="#">Offers</a>
+                    </li>
+                    <li class="headerlist-item">
+                        <a class="header-item-link" href="#">Services</a>
+                    </li>
                 </ul>
-                <a class="header-link-button" href="#">
-                    How can we help you?
-                    <hr class="link-horizontal-roll">
-                </a>
             </nav>
+            <form class="site-form" action="https://echo.htmlacademy.ru" method="GET">
+                <input class="site-form-input" type="search" name="search" placeholder="How can we help you?" aria-label="search" required>
+            </form>
         </div>
     </header>
     <main>
-        <section class="section">
+        <section class="section hero">
             <div class="container flex-container">
                 <div class="hero-div">
                     <h2 class="site-title">Freedom calls.</h2>
                     <p class="site-paragraph">Answer a call from your surfboard. Ask Siri to send a message. Stream your favorite songs on your run. And do it all while leaving your phone behind. Introducing Apple Watch Series 3 with cellular. Now you have the freedom to go with just your watch.</p>
                     <a href="#" class="site-button">Watch the keynote</a>
                 </div>
-                <img src="./img/intro-bg.jpg" alt="smart apple watch" class="hero-img">
             </div>
         </section>
         <section class="section">
